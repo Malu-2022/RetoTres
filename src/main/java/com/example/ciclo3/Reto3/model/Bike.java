@@ -31,7 +31,7 @@ public class Bike  {
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    @JsonIgnoreProperties("bike")
+    @JsonIgnoreProperties("bikes")
     private Category category;
 
 
