@@ -22,7 +22,8 @@ public class Bike  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String brand;
-    private Integer model;
+    @Column (name = "years")
+    private Integer year;
     private String description;
     private String name;
 
@@ -54,11 +55,11 @@ public class Bike  {
     public void setBrand(String brand) {
         this.brand = brand;
     }
-    public Integer getModel() {
-        return model;
+    public Integer getYear() {
+        return year;
     }
-    public void setModel(Integer model) {
-        this.model = model;
+    public void setYear(Integer year) {
+        this.year = year;
     }
     public String getDescription() {
         return description;
