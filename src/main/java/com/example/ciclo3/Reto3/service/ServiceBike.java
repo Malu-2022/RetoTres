@@ -23,14 +23,14 @@ public class ServiceBike {
     }
 
     public Optional<Bike> getBike(int id) {
-        return repositoryBike.getBike(id);
+        return repositoryBike.getBikes(id);
     }
 
     public Bike save(Bike bike) {
         if (bike.getId() == null) {
             return repositoryBike.save(bike);
         } else {
-            Optional<Bike> bike1 = repositoryBike.getBike(bike.getId());
+            Optional<Bike> bike1 = repositoryBike.getBikes(bike.getId());
             if (bike1.isEmpty()) {
                 return repositoryBike.save(bike);
             } else {
