@@ -45,10 +45,10 @@ public class Category {
     public void setDescription(String description) {
         this.description = description;
     }
-    public List<Bike> getBike() {
+    public List<Bike> getBikes() {
         return bikes;
     }
-    public void setBike(List<Bike> bikes) {
+    public void setBikes(List<Bike> bikes) {
         this.bikes = bikes;
     }
       
