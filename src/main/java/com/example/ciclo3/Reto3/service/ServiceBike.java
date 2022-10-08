@@ -49,6 +49,17 @@ public class ServiceBike {
                 if(bike.getName()!=null){
                     g.get().setName(bike.getName());
                 }
+                if(bike.getBrand()!=null){
+                    g.get().setBrand(bike.getBrand());
+                }
+                if(bike.getYear()!=null){
+                    g.get().setYear(bike.getYear());
+                }
+                if(bike.getCategory()!=null){
+                    g.get().setCategory(bike.getCategory());
+                }
+                
+                
                 return repositoryBike.save(g.get());
             }
         }
