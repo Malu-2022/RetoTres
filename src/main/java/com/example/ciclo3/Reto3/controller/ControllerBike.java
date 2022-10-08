@@ -43,6 +43,16 @@ public class ControllerBike {
     public Bike save(@RequestBody Bike bike) {
         return serviceBike.save(bike);
     }
+    
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Bike update(@RequestBody Bike bike) {
+        return serviceBike.update(bike);
+    }
 
-
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") int bikeId) {
+        return serviceBike.deleteBike(bikeId);
+    }
 }
